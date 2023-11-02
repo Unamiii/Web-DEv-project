@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>My Contacts</title>
+        <style>
+            body{
+                background-color: #222;
+                padding: 0;
+                margin: 0;
+            }
+            .container{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-top: 50px;
+        
+            }
+
+            .content{
+                border: 5px solid black;
+                color: white;
+                background-color: black;
+                opacity: 0.6;
+                float: left;
+                margin: 15px;
+                border-radius: 5px;
+                position: relative;
+                padding: 15px;
+                width: 20%;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                transition: 0.5s ease-in-out;
+            }
+            .content:hover{
+                transform: translateY(20px);
+            }
+            .content:before{
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                display: block;width: 100%;
+                height: 100%;
+                background: linear-gradient(to bottom, rgb(0,0,0,0.1), rgb(0,0,0,0.1));
+                z-index: 2;
+                transition: 0.5s all;
+                opacity: 0;
+            }
+            .content:hover:before{
+                opacity: 1;
+            }
+            .content img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                position: relative;
+                top: 0;
+                left:0;
+            }
+            .content .info{
+                position: relative;
+                z-index: 3;
+                color: #fff;
+                opacity: 0;
+                transform: translateY(30px);
+                transition: 0.5s all;
+            }
+            .content:hover .info{
+                opacity: 1;
+                transform: translateY(0px);
+            }
+            .content .info h3{
+                margin: 0;
+            }
+            .content .info p{
+                letter-spacing: 1px;
+                font-size: 15px;
+                margin-top: 8px;
+                margin-bottom: 20px;
+            }
+            .content img{
+                max-width: 90%;
+                height: 60%;
+                border-radius: 5px;
+                width: 100%;
+                margin: 10px;
+                padding: 10px;
+                filter: grayscale(100%);
+                
+                
+            }
+            nav{
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 20px 0px;
+                text-align: center;
+                }
+
+                nav ul{
+                display:inline-block;
+                padding: 10px;
+                margin: 0;
+                }
+                nav ul li{
+                list-style: none;
+                padding: 0px 20px;
+                display: inline-block;
+                font-family: 'Gills sans', sans-serif;
+                }
+
+                nav ul li a{
+                position: relative;
+                color: #a0a0a0;
+                font-size: medium;
+                text-decoration: none;
+                font-family: "Gills sans", sans-serif;
+                padding: 0 10px;
+                }
+                a:after{
+                content: "";
+                position: absolute;
+                background-color: #fff;
+                height: 3px;
+                width: 0;
+                left: 0;
+                bottom: -10px;
+                transition: 0.3s;
+                }
+                a:hover{
+                color: #ffff;
+                }
+                a:hover:after{
+                width: 100%;
+                }
+
+
+            a:after{
+            content: "";
+            position: absolute;
+            background-color: #fff;
+            height: 3px;
+            width: 0;
+            left: 0;
+            bottom: -10px;
+            transition: 0.3s;
+        }
+            h1{
+                text-align: center;
+                color: white;
+                margin-top: 200px;
+                font-weight: 500;
+                letter-spacing: 5px;
+                cursor: pointer;
+                }
+                h1 span{
+                transition: 0.5s;
+                }
+                h1:hover span:nth-child(1){
+                margin-right: 10px;
+                }
+                h1:hover span:nth-child(1):after{
+                content: '';
+                }
+                h1:hover span:nth-child(2){
+                margin-right: 10px;
+                }
+                h1:hover span:nth-child(3){
+                margin-right: 10px;
+                }
+                h1:hover span{
+                color: #fff;
+                text-shadow: 0 0 10px #fff , 0 0 20px #fff;
+                
+                }
+                *,
+                *:before,
+                *:after{
+                padding: 0;
+                margin: 0;
+                box-sizing: border-box;
+                }
+        </style>
+    </head>
+    <body>
+        <nav>
+            <ul>
+                <li><a href="../HTmlfile/index.html">Home Page</a></li>
+                <li><a href="../HTmlfile/page2.html">My Hobbies</a></li>
+            </ul>
+        </nav>
+        <h1><span>My</span><span> Contacts</span></h1>
+        <div class="container">
+            <div class="content" id="box">
+                <img src="..//images/aman-pal-15r9RAOy38Q-unsplash.jpg" alt="first">
+                <h3>My Contacts</h3>
+                <p href="" class="btn">Hover to read</p>
+                <div class="info">
+                <p>Instagram: Unamiimartinsz</p>
+                <p>gmail: henriqueunami16@gmail.com</p>
+                <p>Phone Number: +43 664 9303 7228</p>
+                <p>My Whatsapp: +268 78188773</p>
+                </div>
+            </div>
+    </body>
+</html>
